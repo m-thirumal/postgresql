@@ -1,1 +1,1 @@
-This repository has few useful functions and triggers that are common in most of the project
+This repository has few useful functions, queries and triggers which are common in most of the project
