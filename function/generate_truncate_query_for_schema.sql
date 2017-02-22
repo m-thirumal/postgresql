@@ -1,1 +1,1 @@
-SELECT 'TRUNCATE ' || input_table_name || ' CASCADE;' AS truncate_query FROM(SELECT table_schema || '.' || table_name AS input_table_name  FROM information_schema.tables WHERE table_schema = schema_name) AS information;  
+SELECT 'TRUNCATE ' || input_table_name || ' CASCADE;' AS truncate_query FROM(SELECT table_schema || '.' || table_name AS input_table_name  FROM information_schema.tables WHERE table_schema = '/*specify your schema name*/') AS information;  
