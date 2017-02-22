@@ -5,3 +5,7 @@ END;
 $$
 language 'plpgsql';
  
+
+
+-- Useage
+select * find_table('/*table_name*/');

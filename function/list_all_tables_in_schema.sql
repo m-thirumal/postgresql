@@ -3,3 +3,8 @@ BEGIN
 	RETURN query SELECT table_name::varchar FROM information_schema.tables WHERE table_schema = schema_name;
 END;
 $$ Language 'plpgsql';
+
+
+
+-- Usage
+select * list_table('/*schema_name*/');
