@@ -1,4 +1,4 @@
-// Install dependencies, create a virtual environment, download, install & configure
+# Install dependencies, create a virtual environment, download, install & configure
 
 sudo apt-get install virtualenv python-pip libpq-dev python-dev
 
@@ -13,12 +13,12 @@ pip install pgadmin4-1.2-py2-none-any.whl
 
 vi lib/python2.7/site-packages/pgadmin4/config_local.py
 
-// Add the following line in the file
+# Add the following line in the file
 SERVER_MODE = False
 
-// Configure 
+# Configure 
 python lib/python2.7/site-packages/pgadmin4/setup.py
 
-// Run
+# Run
 python lib/python2.7/site-packages/pgadmin4/pgAdmin4.py
 
