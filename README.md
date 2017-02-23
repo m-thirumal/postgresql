@@ -1,5 +1,5 @@
-This repository has few useful functions, queries and triggers which are common in most of the project
+#### This repository has few useful functions, queries and triggers which are common in most of the project
 
-Format
+## How to use
 
- Replace comment /* table_name */ with original values
+ Replace comment /* table_name */ with original table name values
