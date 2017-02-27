@@ -3,3 +3,6 @@ ALTER TABLE /*table_name*/ ADD CONSTRAINT /*constraint_name*/ CHECK (/*FK_Column
 
 -- Two column should not be equal
 ALTER TABLE /*table_name*/ ADD CONSTRAINT /*constraint_name*/ CHECK (/*Column_1*/ <> /*Column_2*/);
+
+-- Mutually Exclusive Foreign key
+ALTER TABLE /*table_name*/ ADD CONSTRAINT /*constraint_name*/ CHECK((/*Column_1*/ IS NULL AND /*Column_2*/ IS NOT NULL) OR (/*Column_1*/ IS NOT NULL AND /*Column_2*/ IS NULL));
