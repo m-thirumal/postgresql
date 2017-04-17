@@ -44,6 +44,8 @@ $$
 language 'plpgsql' IMMUTABLE;
 
 
---
+-- usage
+-- select * from get_province(/* country_Cd */ , /* locale */); 
+-- Eg: select * from get_province(99, 'en_IN');
  
  
