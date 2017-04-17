@@ -5,3 +5,5 @@ _Show database size_
 _Show size of table size_
 > SELECT pg_size_pretty(pg_relation_size('code.address_type_cd'));
 
+Reload configuration 
+> select pg_reload_conf();
