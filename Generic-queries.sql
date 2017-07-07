@@ -16,3 +16,9 @@ select pg_xact_commit_timestamp(xmin), * from indsolv.address
 
 -- To get last commit/transaction Date of column
 SELECT pg_xact_commit_timestamp(xmin), * FROM YOUR_TABLE_NAME where COLUMN_NAME=VALUE;
+
+-- Show default date style
+SHOW datestyle;
+
+--- Get current date
+SELECT current_date;
