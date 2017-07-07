@@ -22,3 +22,8 @@ SHOW datestyle;
 
 --- Get current date
 SELECT current_date;
+
+--- Change date style (postgres, ISO, SQL)
+SET datestyle TO postgres, dmy;
+SET datestyle TO postgres, mdy;
+SET datestyle TO ISO, dmy;
