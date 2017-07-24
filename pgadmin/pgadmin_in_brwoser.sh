@@ -7,9 +7,9 @@ virtualenv pgadmin4
 cd pgadmin4
 source bin/activate
 
-wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v1.4/pip/pgadmin4-1.4-py2.py3-none-any.whl 
+wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v1.6/pip/pgadmin4-1.6-py2.py3-none-any.whl 
 
-pip install pgadmin4-1.2-py2-none-any.whl
+pip install pgadmin4-1.6-py2-none-any.whl
 
 vi lib/python2.7/site-packages/pgadmin4/config_local.py
 
