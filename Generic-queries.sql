@@ -37,3 +37,26 @@ DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 GRANT ALL ON SCHEMA public TO administrator;
 GRANT ALL ON SCHEMA public TO public;
+--- List all the installed postgres languages
+SELECT lanname FROM pg_language
+---Install python language
+CREATE EXTENSION plpython2u;
+CREATE EXTENSION plpython3u;
+--Generate HTML report
+./psql -d indsolv -H -c "SELECT category, count(*) As num_per_cat FROM pg_settings WHERE category LIKE '%Query%' GROUP BY category ORDER BY category;" -o test.html
+--To get a glimpse inside the tables controlling all of your agents and jobs, connect to the postgres database and execute the query
+SELECT c.relname As table_name, d.description
+FROM pg_class As c
+INNER JOIN pg_namespace n ON n.oid = c.relnamespace
+INNER JOIN pg_description As d ON d.objoid = c.oid AND d.objsubid = 0
+WHERE n.nspname = 'pgagent'
+ORDER BY c.relname;
+----List log step results from today
+SELECT j.jobname, s.jstname, l.jslstart,l.jslduration, l.jsloutput
+FROM pgagent.pga_jobsteplog As l
+INNER JOIN pgagent.pga_jobstep As s ON s.jstid = l.jsljstid
+INNER JOIN pgagent.pga_job As j ON j.jobid = s.jstjobid
+WHERE jslstart > CURRENT_DATE
+ORDER BY j.jobname, s.jstname, l.jslstart DESC;
+---ILIKE for Case Insensitive Search
+SELECT tract_name FROM census.lu_tracts WHERE tract_name ILIKE '%duke%';

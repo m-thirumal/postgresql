@@ -10,7 +10,7 @@ END IF;
 RETURN NEW;
 
 END
-$func$  LANGUAGE plpgsql;
+$$  LANGUAGE plpgsql;
 
 
 --Trigger
