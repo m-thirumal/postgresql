@@ -17,6 +17,8 @@ BEGIN
 		RAISE NOTICE 'Table not found in database';
 	END IF;
 END; 
-$$ 
-LANGUAGE 'plpgsql';
+$$ LANGUAGE 'plpgsql';
  
+
+-- Usage
+select * from list_code('party_subtype_cd', 'en_IN');
