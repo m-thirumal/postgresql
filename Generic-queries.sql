@@ -33,6 +33,7 @@ select nspname from pg_catalog.pg_namespace;
 ---list of schema with sizes 
 SELECT schema_name, pg_size_pretty(sum(table_size)::bigint) as "disk space", (sum(table_size) / pg_database_size(current_database())) * 100 as "percent" FROM (SELECT pg_catalog.pg_namespace.nspname as schema_name, pg_relation_size(pg_catalog.pg_class.oid) as table_size FROM   pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON relnamespace = pg_catalog.pg_namespace.oid) t GROUP BY schema_name ORDER BY schema_name
 ---DELETE All the tables from schema
+SELECT 'TRUNCATE ' || input_table_name || ' CASCADE;' AS truncate_query FROM(SELECT table_schema || '.' || table_name AS input_table_name FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog', 'information_schema') AND table_schema NOT LIKE 'pg_toast%') AS information;
 cd ...
 --- List all the installed postgres languages
 SELECT lanname FROM pg_language
