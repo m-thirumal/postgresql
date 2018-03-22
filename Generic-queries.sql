@@ -58,3 +58,10 @@ WHERE jslstart > CURRENT_DATE
 ORDER BY j.jobname, s.jstname, l.jslstart DESC;
 ---ILIKE for Case Insensitive Search
 SELECT tract_name FROM census.lu_tracts WHERE tract_name ILIKE '%duke%';
+---Kill Session
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE 
+    -- don't kill my own connection!
+   pid <> pg_backend_pid()
+    -- don't kill the connections to other databases
+   AND 
+	datname = 'indsolv';
