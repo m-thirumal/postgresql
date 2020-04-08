@@ -69,4 +69,17 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE
 --Database hit ratio
 select datname, (1.0*blks_hit)/(blks_read+blks_hit) AS ratio from pg_stat_database where blks_read>0;
 
+--Check temporary file size
+select datname, temp_files, pg_size_pretty(temp_bytes) from pg_stat_database;
+
+--Look for conflicts/deadlocks
+select * from pg_stat_database_conflicts;
+--Stats activity
+select * from pg_stat_activity;
+--Are my indexes beign used?
+select * from pg_stat_user_indexes;
+select * from pg_stat_all_indexes;
+--Not used indexes
+select * from pg_stat_user_indexes where idx_scan =0
+
 														
