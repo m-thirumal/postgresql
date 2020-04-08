@@ -78,6 +78,7 @@ select * from pg_stat_database_conflicts;
 select * from pg_stat_activity;
 --Are my indexes beign used?
 select * from pg_stat_user_indexes;
+select * from pg_stat_user_tables;
 select * from pg_stat_all_indexes;
 --Not used indexes
 select * from pg_stat_user_indexes where idx_scan =0
