@@ -65,3 +65,8 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE
     -- don't kill the connections to other databases
    AND 
 	datname = 'indsolv';
+														 
+--Database hit ratio
+select datname, (1.0*blks_hit)/(blks_read+blks_hit) AS ratio from pg_stat_database where blks_read>0;
+
+														
