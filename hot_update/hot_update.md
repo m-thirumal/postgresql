@@ -1,5 +1,7 @@
 ## Hot (Heap Only Tuple) Update
 
+Update the row - where there is no update on index column.
+
  ![Hot Update](hot_update.png)
  
  #### How to Track?
