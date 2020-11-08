@@ -5,5 +5,8 @@
  ### [PgModeler](PgModeler)
  * [Install in Ubuntu](pgmodeler/build_pgmodeler_from_source_ubuntu.md)
 
+### [PgBackRest](PgBackRest)
+
+### [PgAdmin](pgadmin)
 
 ![PgModeler](pgmodeler/Ubuntu.png)
