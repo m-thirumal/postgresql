@@ -3,7 +3,7 @@
 ### [PgModeler](PgModeler)
  * [Install in Ubuntu](pgmodeler/build_pgmodeler_from_source_ubuntu.md)
 
-### [Backup & Restore](Backup Restore)
+### [Backup and Restore](Backup Restore)
 
 ### [PgBackRest](PgBackRest)
 
