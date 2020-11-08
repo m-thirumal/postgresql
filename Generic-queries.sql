@@ -1,5 +1,7 @@
+---Get version of postgres
+select version();
 ---To get all the details about postgresql (here to get total number of rows in all tables)
-SELECT schemaname, relname, n_live_tup FROM pg_stat_user_tables where schemaname = 'code' ORDER BY n_live_tup DESC; 
+SELECT schemaname, relname, n_live_tup FROM pg_stat_user_tables where schemaname = 'code' ORDER BY n_live_tup DESC;
 
 -- Show database size_
 SELECT pg_database.datname, pg_size_pretty(pg_database_size(pg_database.datname)) AS size FROM pg_database;
@@ -8,7 +10,7 @@ SELECT pg_size_pretty(pg_database_size('indsolv'));
 ---Show size of table size_
 SELECT pg_size_pretty(pg_relation_size('indsolv.address'));
 
----Reload configuration 
+---Reload configuration
 select pg_reload_conf();
 
 -- To get last commit/transaction Date of table
@@ -30,7 +32,7 @@ SET datestyle TO ISO, dmy;
 ---Get all scehma name
 select schema_name from information_schema.schemata
 select nspname from pg_catalog.pg_namespace;
----list of schema with sizes 
+---list of schema with sizes
 SELECT schema_name, pg_size_pretty(sum(table_size)::bigint) as "disk space", (sum(table_size) / pg_database_size(current_database())) * 100 as "percent" FROM (SELECT pg_catalog.pg_namespace.nspname as schema_name, pg_relation_size(pg_catalog.pg_class.oid) as table_size FROM   pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON relnamespace = pg_catalog.pg_namespace.oid) t GROUP BY schema_name ORDER BY schema_name
 ---DELETE All the tables from schema
 SELECT 'TRUNCATE ' || input_table_name || ' CASCADE;' AS truncate_query FROM(SELECT table_schema || '.' || table_name AS input_table_name FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog', 'information_schema') AND table_schema NOT LIKE 'pg_toast%') AS information;
@@ -59,13 +61,13 @@ ORDER BY j.jobname, s.jstname, l.jslstart DESC;
 ---ILIKE for Case Insensitive Search
 SELECT tract_name FROM census.lu_tracts WHERE tract_name ILIKE '%duke%';
 ---Kill Session
-SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE 
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE
     -- don't kill my own connection!
    pid <> pg_backend_pid()
     -- don't kill the connections to other databases
-   AND 
+   AND
 	datname = 'indsolv';
-														 
+
 --Database hit ratio
 select datname, (1.0*blks_hit)/(blks_read+blks_hit) AS ratio from pg_stat_database where blks_read>0;
 
@@ -82,5 +84,3 @@ select * from pg_stat_user_tables;
 select * from pg_stat_all_indexes;
 --Not used indexes
 select * from pg_stat_user_indexes where idx_scan =0
-
-														
