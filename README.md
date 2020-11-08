@@ -2,4 +2,8 @@
 
 ## How to use
 
- Replace comment /* table_name */ with original table name values
+ ### [PgModeler](PgModeler)
+ * [Install in Ubunut](PgModeler/build_pgmodeler_from_source_ubuntu.md)
+
+
+![PgModeler](Ubuntu)
