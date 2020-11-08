@@ -3,7 +3,7 @@
 ## How to use
 
  ### [PgModeler](PgModeler)
- * [Install in Ubunut](PgModeler/build_pgmodeler_from_source_ubuntu.md)
+ * [Install in Ubuntu](pgmodeler/build_pgmodeler_from_source_ubuntu.md)
 
 
-![PgModeler](Ubuntu)
+![PgModeler](pgmodeler/Ubuntu.png)
