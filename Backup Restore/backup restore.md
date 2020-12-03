@@ -8,7 +8,9 @@ For `Mac OS` go to `/Applications/Postgres.app/Contents/Versions/latest/Bin`
 
     ./psql indsolv< /Users/Thirumal/Documents/indsolv.sql 
 
-For `Ubuntu`
+For `Ubuntu`, login with `postgres` user
+
+    sudo su postgres
 
     psql -U {userName} {databaseName} < {backup-file}.sql 
 
