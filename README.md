@@ -1,13 +1,13 @@
 #### This repository has few useful functions, queries and triggers which are common in most of the project
 
-### [PgModeler](PgModeler)
+#### [PgModeler](PgModeler)
 
  * [Install in Ubuntu](pgmodeler/build_pgmodeler_from_source_ubuntu.md)
 
-### [PgBackRest](PgBackRest)
+#### [PgBackRest](PgBackRest)
 
-### [PgAdmin](pgadmin)
+#### [PgAdmin](pgadmin)
 
-### [Tuning](Tuning)
+#### [Tuning](Tuning)
 
 ![PgModeler](pgmodeler/Ubuntu.png)
