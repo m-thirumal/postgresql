@@ -67,4 +67,14 @@ List all privilege
 
 	`option` can be `SUPER, CREATEDB, CREATEROLE, etc`.
 
-###  Create login roles
+Example:-
+
+	CREATE ROLE Thirumal;
+
+	GRANT SELECT, etc. ON ALL TABLES IN SCHEMA public TO "Thirumal";
+
+### Revoke
+
+	REVOKE writeaccess FROM Thirumal;
+
+	REVOKE ALL ON accommodation_transaction FROM PUBLIC;
