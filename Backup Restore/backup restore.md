@@ -13,7 +13,9 @@ For `Ubuntu`, login with `postgres` user
     sudo su postgres
     
     # Create database
-    create {database_name}
+    psql
+    create {database_name};
+    \q
 
     psql -U {userName} {databaseName} < {backup-file}.sql 
 
