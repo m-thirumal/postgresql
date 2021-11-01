@@ -11,6 +11,9 @@ For `Mac OS` go to `/Applications/Postgres.app/Contents/Versions/latest/Bin`
 For `Ubuntu`, login with `postgres` user
 
     sudo su postgres
+    
+    # Create database
+    create {database_name}
 
     psql -U {userName} {databaseName} < {backup-file}.sql 
 
