@@ -12,6 +12,9 @@
 2. Check & change the permission if it's not `700`,
 
        sudo chmod 700 -R /var/lib/postgresql/13/main/
+       
+       $ ls -l /var/lib/postgresql/13/main/
+       drwx------ 19 postgres postgres
 
 3. Then, restart PostgreSQL server
 
