@@ -13,7 +13,7 @@ sudo chown -R thirumal:thirumal /build
 
 [source, shell]
 ----
-wget -q -O - https://github.com/pgbackrest/pgbackrest/archive/release/2.30.tar.gz | tar zx -C /build
+wget -q -O - https://github.com/pgbackrest/pgbackrest/archive/release/2.39.tar.gz | tar zx -C /build
 ----
 
 * Install build dependencies

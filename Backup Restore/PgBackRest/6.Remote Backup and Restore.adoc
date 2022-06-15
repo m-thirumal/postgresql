@@ -1,0 +1,29 @@
+== REMOTE BACKUP AND RESTORE WITH PGBACKREST
+
+We need two servers. Let’s call ours:
+
+* pgbackup
+* db1
+
+=== Build
+
+link:1.build.adoc[Build pgBackRest from source]
+
+=== Installing pgbackrest:
+
+We need to install pgBackRest on the database and the backup server. Make sure you install the same version on both.
+
+==== For the database server,
+
+
+==== For the backup server,
+
+Create a pgbackrest user on the backup server
+
+[source, shell]
+----
+sudo adduser --disabled-password --gecos "" pgbackrest
+----
+===== Install required Perl package and pgBackRest from a package or manually on pgbackup as below
+[source, shell]
+----
