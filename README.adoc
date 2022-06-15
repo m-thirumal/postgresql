@@ -1,0 +1,20 @@
+= This repository has few useful functions, queries and triggers which are common in most of the project
+
+== PgModeler
+ 
+link:pgmodeler/build_pgmodeler_from_source_ubuntu.md[Installation on Ubuntu]
+
+== Backup
+
+=== PgBackRest
+
+* link:Backup%20Restore/PgBackRest/0.Intro.adoc[PgBackRest]
+
+== PgAdmin
+
+
+== Tuning
+
+image::pgmodeler/mac-pgmodeler.png[]
+
+

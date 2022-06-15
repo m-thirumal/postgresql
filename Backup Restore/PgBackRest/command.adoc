@@ -1,0 +1,7 @@
+===== To check backup information
+
+[source, shell]
+----
+sudo -u postgres pgbackrest info
+----
+
