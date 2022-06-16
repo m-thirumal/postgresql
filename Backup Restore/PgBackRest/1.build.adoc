@@ -27,5 +27,5 @@ sudo apt-get install make gcc libpq-dev libssl-dev libxml2-dev pkg-config liblz4
 
 [source, shell]
 ----
-cd /build/pgbackrest-release-2.30/src && ./configure && make
+cd /build/pgbackrest-release-2.39/src && ./configure && make
 ----

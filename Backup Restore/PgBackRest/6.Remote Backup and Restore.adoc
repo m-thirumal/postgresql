@@ -26,4 +26,84 @@ sudo adduser --disabled-password --gecos "" pgbackrest
 ----
 ===== Install required Perl package and pgBackRest from a package or manually on pgbackup as below
 [source, shell]
+sudo apt-get install libdbd-pg-perl
+sudo scp BUILD_HOST:/root/pgbackrest-release-2.39/src/pgbackrest /usr/bin/
+sudo chmod 755 /usr/bin/pgbackrest
 ----
+
+==== Create pgBackRest configuration files, directories and repository on pgbackup
+ 
+[source, shell]
+----
+sudo mkdir -p -m 770 /var/log/pgbackrest
+sudo chown pgbackrest:pgbackrest /var/log/pgbackrest
+sudo mkdir -p /etc/pgbackrest
+sudo mkdir -p /etc/pgbackrest/conf.d
+sudo touch /etc/pgbackrest/pgbackrest.conf
+sudo chmod 640 /etc/pgbackrest/pgbackrest.conf
+sudo chown pgbackrest:pgbackrest /etc/pgbackrest/pgbackrest.conf
+ 
+sudo mkdir -p /var/lib/pgbackrest
+sudo chmod 750 /var/lib/pgbackrest
+sudo chown pgbackrest:pgbackrest /var/lib/pgbackrest
+----
+
+Now we are ready to proceed with enabling communication between the database and the backup server. For that, pgBackRest requires a passwordless SSH connection.
+
+== Passwordless SSH Connection
+
+To know more about link:https://github.com/m-thirumal/linux-guide/blob/main/ssh/Passwordless_Login.adoc[Passwordless SSH Connection] 
+
+We can do that by generating an SSH authentication key file using the command
+
+[source, shell]
+----
+ssh-keygen
+----
+
+=== On the pgbackup server as pgbackrest user
+
+Create `.ssh` folder and generate `key` using the following commands 
+
+[source, shell]
+----
+sudo -u pgbackrest mkdir -m 750 /home/pgbackrest/.ssh
+sudo -u pgbackrest ssh-keygen -f /home/pgbackrest/.ssh/id_rsa -t rsa -b 4096 -N ""
+----
+
+=== On db1 as postgres user:
+Create `.ssh` folder and generate `key` using the following commands
+[source, shell]
+----
+sudo -u postgres mkdir -m 750 -p /var/lib/postgresql/.ssh
+sudo -u postgres ssh-keygen -f /var/lib/postgresql/.ssh/id_rsa -t rsa -b 4096 -N ""
+----
+
+==== Exchange the public keys generated between the servers
+
+==== On pgbackup:
+Login to `pgbackrest` user to rund the following command because the following command takes key from current user home directory
+
+[source, shell]
+----
+cat ~/.ssh/id_rsa.pub | ssh postgres@db1 "cat >> ~/.ssh/authorized_keys"
+----
+
+==== On db1:
+Go to `/var/lib/postgres/.ssh/` directory and run the following command, because `postgres` default home directory is `/var/lib/postgres`
+
+[source, shell]
+----
+cat id_rsa.pub | ssh pgbackrest@pgbackup "cat >> ~/.ssh/authorized_keys"
+----
+
+Test the passwordless connection as follows:
+
+[source, shell]
+----
+sudo -u pgbackrest ssh postgres@db1
+
+sudo -u postgres ssh pgbackrest@repository
+----
+
+== Configuration
