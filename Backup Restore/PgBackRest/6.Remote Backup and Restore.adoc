@@ -5,8 +5,10 @@ We need two servers. Let’s call ours:
 * pgbackup
 * db1
 
-=== Build
+image::img/Backup_architecture.svg[Backup]
 
+=== Build
+Refer ->
 link:1.build.adoc[Build pgBackRest from source]
 
 === Installing pgbackrest:
