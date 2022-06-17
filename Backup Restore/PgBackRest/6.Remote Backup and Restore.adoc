@@ -176,9 +176,10 @@ With the setup ready, let’s take our first remote backup from pgbackup. The de
 
 [source, shell]
 ----
+sudo -u pgbackrest pgbackrest --stanza=demo backup
+sudo -u pgbackrest pgbackrest --stanza=demo info
 ----
 
 == Schedule the backup
 
-
-[source, ]
+link:
