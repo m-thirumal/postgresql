@@ -10,6 +10,8 @@ link:pgmodeler/build_pgmodeler_from_source_ubuntu.md[Installation on Ubuntu]
 
 * link:Backup%20Restore/PgBackRest/0.Intro.adoc[PgBackRest]
 
+image::Backup%20Restore/PgBackRest/img/Backup_architecture.svg[Backup]
+
 == PgAdmin
 
 
