@@ -179,7 +179,86 @@ With the setup ready, let’s take our first remote backup from pgbackup. The de
 sudo -u pgbackrest pgbackrest --stanza=demo backup
 sudo -u pgbackrest pgbackrest --stanza=demo info
 ----
+You will find directories and files being created in the backup location.
 
 == Schedule the backup
 
-link:
+ link:5.Schedule Backup.adoc[scheduler]
+
+== Restore
+
+Taking a full backup was easy. Let’s see some examples of incremental backup and recovery with a target:
+
+
+Create a test database on db1:
+
+[source, shell]
+----
+postgres=# create database test;
+CREATE DATABASE
+postgres=# \l
+List of databases
+    Name   |  Owner   | Encoding |   Collate   |    Ctype    | Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres  postgres=CTc/postgres
+ test      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+(4 rows)
+----
+
+Make another backup. By default, this will be incremental since it’s the second backup and we are not specifying the type:
+
+[source,shell]
+----
+sudo -u pgbackrest pgbackrest --stanza=demo backup
+----
+
+To restore, stop PostgreSQL on db1 and run pgbackrest with the restore command:
+
+[source,shell]
+----
+sudo service postgresql stop
+sudo -u postgres pgbackrest --stanza=demo --delta restore
+sudo service postgresql start
+----
+
+If you check the database now, you will not find the test database. This is because the backup was restored from the first full backup.
+
+[source, shell]
+----
+postgres=# \l
+List of databases
+   Name    |  Owner   | Encoding | Collate     | Ctype       | Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres  | UTF8    | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres  | UTF8    | en_US.UTF-8 | en_US.UTF-8 | =c/postgres postgres=CTc/postgres
+ template1 | postgres  | UTF8    | en_US.UTF-8 | en_US.UTF-8 | =c/postgres postgres=CTc/postgres
+(3 rows)
+----
+
+To restore the data up to the incremental backup, run the restore command with `recovery_target` in `--recovery-option``.
+
+[source,shell]
+----
+sudo service postgresql stop
+sudo -u postgres pgbackrest --stanza=demo --delta restore \
+                            --recovery-option=recovery_target=immediate
+sudo service postgresql start
+----
+
+Let’s check the database now:
+[source, shell]
+----
+postgres=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges  
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ test      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+(4 rows)
+----
