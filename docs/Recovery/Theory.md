@@ -1,13 +1,13 @@
-=== Recovery Explaination
+### Recovery Explaination
 
-==== RTO 
+#### RTO 
 
 RTO - Recovery time objective (RTO) is the maximum bearable length of time that an application or a service can be down after a disaster without causing any significant damage to the business.
 
-image::img/databackup_rto_timeline-f.png[RTO]
+![RTO](./img/databackup_rto_timeline-f.png)
 
-==== RTO VS RPO
+#### RTO VS RPO
 
 
 
-image::img/disaster_recovery-rto_rpo.png[]
+[RPO](./img/disaster_recovery-rto_rpo.png)
