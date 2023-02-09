@@ -1,4 +1,4 @@
-site_name: PostgreSQL Tutorial & Reference documentation
+site_name: Postgresql Guide
 theme:
   name: material
   palette:
@@ -16,12 +16,27 @@ theme:
         name: Switch to light mode
       primary: indigo
       accent: indigo
-    
-    
+  features:
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/git-alt
+extra_css:
+  - stylesheets/extra.css
 
 #  logo: assets/logo.png
 #extra:
-#    homepage: https://www.evoters.in
+#    homepage: https://www.github.com/m-thirumal
 
 plugins:
   - search
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+repo_url: https://github.com/m-thirumal/postgresql
+repo_name: m-thirumal/postgresql
+
+
