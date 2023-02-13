@@ -1,4 +1,4 @@
-# This repository has few useful functions, queries and triggers which are common in most of the project
+# PostgreSQL Tutorial
 
 ## Terminal Access
 
