@@ -2,4 +2,6 @@
 
 * [Backup](Backup/backup.md)
 
+    * [pg_dump](Backup/backup%20using%20pg_dump.md)
+
 * [Restore](Restore/Restore.md)
