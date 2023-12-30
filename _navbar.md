@@ -2,7 +2,7 @@
 
 * [Backup](Backup/backup.md)
    
-* Restore 
+* [Restore](Restore/Restore.md)
    
 * [Modeler]
     * [PgModeler]

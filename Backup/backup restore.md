@@ -1,25 +1,13 @@
-#### To take back up
+#### To take back up using `pg_dump`
 
-    sudo -u postgres pg_dump {database_name_to_backup} > {backup_file_name}.sql
+Syntax:-
 
-#### Restore (Login as postgres user)
+```shell
+psql -U {userName} pg_dump {databaseName} > {backup-file}.sql
 
-For `Mac OS` go to `/Applications/Postgres.app/Contents/Versions/latest/Bin`
+sudo -u postgres pg_dump {database_name_to_backup} > {backup_file_name}.sql
+```
 
-    ./psql {database_name_to_backup} < /Users/Thirumal/Documents/{database_name_to_backup}.sql 
-
-For `Ubuntu`, login with `postgres` user
-
-    sudo su postgres
-    
-    # Create database
-    psql
-    create {database_name};
-    \q
-
-    psql -U {userName} {databaseName} < {backup-file}.sql 
-
-    psql -U postgres {database_name_to_backup} < {database_name_to_backup}.sql
 
 
 
