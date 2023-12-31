@@ -4,4 +4,4 @@
 2. P -> Partition tolerance (Node)
 3. C -> Consistence (All nodes returns latest data)
 
-image::img/cap.png[]
+[](CAP%20Therory/img/cap.png)
