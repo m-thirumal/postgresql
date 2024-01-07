@@ -11,4 +11,6 @@
    
 * [Modeler](https://m-thirumal.github.io/installation_guide/#/pgmodeler/build_pgmodeler_from_source_mac)
 
+
+* [Troubleshoot](Troubleshoot/troubleshoot.md)
  

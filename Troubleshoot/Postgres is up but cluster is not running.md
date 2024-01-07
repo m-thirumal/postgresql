@@ -2,22 +2,30 @@
 
 1. Check the cluster Status
 
-       pg_lsclusters
+```shell
+pg_lsclusters
 
-       Cluster Down:
+Cluster Down:
 
-       Ver Cluster Port Status Owner    Data directory              Log file
-       13  main    5432 down   postgres /var/lib/postgresql/13/main /var/log/postgresql/postgresql-13-main.log
+Ver Cluster Port Status Owner    Data directory              Log file
+16  main    5432 down   postgres /var/lib/postgresql/16/main /var/log/postgresql/postgresql-16-main.log
+```
 
 2. Check & change the permission if it's not `700`,
 
-       sudo chmod 700 -R /var/lib/postgresql/13/main/
-       
-       $ ls -l /var/lib/postgresql/13/main/
-       drwx------ 19 postgres postgres
+```shell
+sudo chmod 700 -R /var/lib/postgresql/16/main/
+
+$ ls -l /var/lib/postgresql/16/main/
+drwx------ 19 postgres postgres
+```
 
 3. Then, restart PostgreSQL server
 
-       sudo -i -u postgres
+```shell
+sudo -i -u postgres
 
-       /usr/lib/postgresql/13/bin/pg_ctl restart -D /var/lib/postgresql/13/main
+/usr/lib/postgresql/13/bin/pg_ctl restart -D /var/lib/postgresql/16/main
+
+```
+       
