@@ -1,6 +1,8 @@
+# Introduction
+
 pgBackRest aims to be a reliable, easy-to-use backup and restore solution that can seamlessly scale up to the largest databases and workloads by utilizing algorithms that are optimized for database-specific requirements.
 
-== Features
+## Features
 
 * Parallel Backup & Restore
 * Local or Remote Operation
