@@ -2,7 +2,7 @@
 
 `pg_dump` is a PostgreSQL tool to take backup
 
-## Backing up a database
+## Back up database
 
 Syntax:-
 
