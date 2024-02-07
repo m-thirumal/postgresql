@@ -2,6 +2,14 @@
 
 `pg_dump` is a PostgreSQL tool to take backup
 
+## Backup Table
+
+```shell
+pg_dump -U postgres -t {table_name} {database_name} > {backup_file}.sql
+
+pg_dump -U postgres -t students example_backups > {backup_file}.sql.
+```
+
 ## Back up database
 
 Syntax:-
