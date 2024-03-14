@@ -1,14 +1,14 @@
 # Extension
 
-To list all available extensions:- 
+List all available extensions:- 
 
-```
+```SQL
 select * from pg_available_extensions; 
 ```
 
-To list installed extension of the selected database  
+List all installed extensions of the selected database  
 
-```
+```SQL
 SELECT * FROM pg_extension;
 ```
 OR 
@@ -18,9 +18,7 @@ OR
 
 ## Install 
 
-#### Syntax
-
-```
+```SQL
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "btree_gist";
 ```

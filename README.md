@@ -4,6 +4,10 @@
 
 * [Roles & Group](Roles%20&%20Group/ROLE.md)
 
+* [Extension](Extension/Extension.md)
+
+* [FWD](Foreign%20Data%20Wrapper/fwd.md)
+
 * [Cluster](Cluster/Commands.md)
 
 * [Backup](Backup/backup.md)
