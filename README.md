@@ -6,7 +6,7 @@
 
 * [Extension](Extension/Extension.md)
 
-* [FWD](Foreign%20Data%20Wrapper/fwd.md)
+* [FWD (Foreign Data Wrapper)](Foreign%20Data%20Wrapper/fwd.md)
 
 * [Cluster](Cluster/Commands.md)
 
