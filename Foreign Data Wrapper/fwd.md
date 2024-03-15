@@ -12,3 +12,4 @@ Postgres now has a lot of (foreign data wrappers)[https://wiki.postgresql.org/wi
 
 
 * [Prepare & install FWD extention](Foreign%20Data%20Wrapper/Setup.md)
+* [Create a foreign server](Foreign%20Data%20Wrapper/create%20foreign%20server.md)
