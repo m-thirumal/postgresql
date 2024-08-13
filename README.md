@@ -11,6 +11,8 @@
 
 * [Extension](Extension/Extension.md)
 
+  * [PostGis](Extension/postgis.md)
+
 * [FWD (Foreign Data Wrapper)](Foreign%20Data%20Wrapper/fwd.md)
 
 * [Cluster](Cluster/Commands.md)
