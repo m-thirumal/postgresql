@@ -8,7 +8,7 @@ sudo mkdir /build
 sudo chown -R ubuntu:ubuntu /build
 ```
 
-* Get/Download the source 
+* Get/Download the source
 
 ```bash
 wget -q -O - https://github.com/pgbackrest/pgbackrest/archive/release/2.53.1.tar.gz | tar zx -C /build
