@@ -105,6 +105,7 @@ compress-level=3
 
 ## Final configuration for S3.
 
+```bash
 [main]
 pg1-path=/var/lib/postgresql/16/main
 
@@ -127,6 +128,7 @@ start-fast=y
 
 [global:archive-push]
 compress-level=3
+```
 
 ## Test
 
