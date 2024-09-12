@@ -3,13 +3,13 @@
 ##  Install dependencies
 
 ```bash
-sudo apt-get install postgresql-client libxml2
+sudo apt-get install postgresql-client libxml2 libssh2-1
 ```
 
 ## Copy the build to `/usr/bin`
 
 ```bash
-sudo scp build:/build/pgbackrest-release-2.30/src/pgbackrest /usr/bin
+sudo scp build:/build/pgbackrest/src/pgbackrest /usr/bin
 
 sudo chmod 755 /usr/bin/pgbackrest
 ```
