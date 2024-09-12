@@ -1,22 +1,20 @@
-== Changes required in PostgreSQL
+# Configure the PostgreSQL for the PgBackRest
 
-=== Listen Address
+## Listen Address
 
-* listen address
+* Modify `listen address` with desired IP address
 
-[source, shell]
-----
+```bash
 listen_addresses = '*'
-----
+```
 
-=== Configure `Archive`
+## Configure `Archive`
 
-[source, shell]
-----
+```bash
 archive_command = 'pgbackrest --stanza=main archive-push %p'
 archive_mode = on
 listen_addresses = '*'
 log_line_prefix = ''
 max_wal_senders = 3
 wal_level = replica
-----
+```

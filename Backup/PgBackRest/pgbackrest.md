@@ -1,7 +1,25 @@
-# PgBackRest Backup
+# Introduction
 
-[PgBackRest](https://pgbackrest.org/)
+[PgBackRest](https://pgbackrest.org/) aims to be a reliable, easy-to-use backup and restore solution that can seamlessly scale up to the largest databases and workloads by utilizing algorithms that are optimized for database-specific requirements.
 
-* [Introduction](Backup/PgBackRest/Intro.md)
+## Features
+
+* Parallel Backup & Restore
+* Local or Remote Operation
+* Full, Incremental, & Differential Backups
+* Backup Rotation & Archive Expiration
+* Backup Integrity
+* Page Checksums
+* Backup Resume
+* Streaming Compression & Checksums
+* Delta Restore
+* Parallel, Asynchronous WAL Push & Get
+* Tablespace & Link Support
+* S3 and Azure Compatible Object Store Support
+* Encryption
+
+## Build, Instal and Configure
+
 * [Build](Backup/PgBackRest/build.md)
 * [Installation](Backup/PgBackRest/Installation.md)
+* [PostgreSQL Configuration](Backup/PgBackRest/Configure%20Postgres.md)

@@ -33,7 +33,7 @@ sudo chmod 640 /etc/pgbackrest/pgbackrest.conf
 sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
 ```
 
-## Make sure the installation worked
+## Test - Make sure the installation worked
 
 
 ```bash
