@@ -11,6 +11,8 @@
 
    * [PostGis](Extension/postgis.md)
 
+* [Replication](Replication/Replication.md)
+
 * [FWD](Foreign%20Data%20Wrapper/fwd.md)
 
 * [Cluster](Cluster/Commands.md)
