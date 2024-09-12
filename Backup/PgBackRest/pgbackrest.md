@@ -24,8 +24,8 @@
 * [Installation](Backup/PgBackRest/Installation.md)
 * [PostgreSQL Configuration](Backup/PgBackRest/Configure%20Postgres.md)
 * [PgBackRest Configuration & Create Stanza & Test](Backup/PgBackRest/Configure%20PgBackRest.md)
-* [Manual & Automate Backup](Bakup/PgBackRest/Perform-Schedule-Backup.md)
-* 
+* [Manual & Automate Backup](Backup/PgBackRest/Perform-Schedule-Backup.md)
+* [Remote Backup and restore](Backup/PgBackRest/Remote%20Backup%20and%20Restore.md)
 
 
 ## Basic commands
