@@ -33,8 +33,8 @@
 | Purpose                                       | Command                                                                                  |
 |-----------------------------------------------|------------------------------------------------------------------------------------------|
 | Get backup info                               | `sudo -u postgres pgbackrest info`                                                       |
-| Create Stanza                                 | `sudo -u pgbackrest pgbackrest --stanza=demo stanza-create`                              |
-| Check whether configuration are properly set  | `sudo -u pgbackrest pgbackrest --stanza=demo check`                                      |
-| Perform Backup                                | `sudo -u pgbackrest pgbackrest --stanza=demo backup`                                     |
-| Perform Restore                               | `sudo -u postgres pgbackrest --stanza=demo --delta restore`                              |
-| To specify type of backup - `full` or `diff`  | `sudo -u postgres pgbackrest --stanza=demo --type=diff  --log-level-console=info backup` |
+| Create Stanza                                 | `sudo -u pgbackrest pgbackrest --stanza=main stanza-create`                              |
+| Check whether configuration are properly set  | `sudo -u pgbackrest pgbackrest --stanza=main check`                                      |
+| Perform Backup                                | `sudo -u pgbackrest pgbackrest --stanza=main backup`                                     |
+| Perform Restore                               | `sudo -u postgres pgbackrest --stanza=main --delta restore`                              |
+| To specify type of backup - `full` or `diff`  | `sudo -u postgres pgbackrest --stanza=main --type=diff  --log-level-console=info backup` |
