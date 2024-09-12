@@ -23,4 +23,18 @@
 * [Build](Backup/PgBackRest/build.md)
 * [Installation](Backup/PgBackRest/Installation.md)
 * [PostgreSQL Configuration](Backup/PgBackRest/Configure%20Postgres.md)
-* [PgBackRest Configuration](Backup/PgBackRest/Configure%20PgBackRest.md)
+* [PgBackRest Configuration & Create Stanza & Test](Backup/PgBackRest/Configure%20PgBackRest.md)
+* [Manual & Automate Backup](Bakup/PgBackRest/Perform-Schedule-Backup.md)
+* 
+
+
+## Basic commands
+
+| purpose  | command
+|-----------------------------------------
+| Get all backup info | sudo -u postgres pgbackrest info
+| Create Stanza       | sudo -u pgbackrest pgbackrest --stanza=demo stanza-create
+| Check whether congiurations are properly set | sudo -u pgbackrest pgbackrest --stanza=demo check
+| Backup | sudo -u pgbackrest pgbackrest --stanza=demo backup
+| Restore| sudo -u postgres pgbackrest --stanza=demo --delta restore
+| To specify type of backup - `full` or `diff`| sudo -u postgres pgbackrest --stanza=demo --type=diff  --log-level-console=info backup
