@@ -1,13 +1,19 @@
-=== Configure Cluster
-[source, shell]
-----
+# PgBackRest Configuration
+
+## Configure Cluster Stanza
+
+A stanza is the configuration for a PostgreSQL database cluster that defines where it is located, how it will be backed up, archiving options, etc.
+
+?> Most db servers will only have one PostgreSQL database cluster and therefore one stanza, whereas backup servers will have a stanza for every database cluster that needs to be backed up.
+
+```bash
 [main]
 pg1-path=/var/lib/postgresql/13/main
-----
+```
 
-=== Configure retention
-[source, shell]
-----
+## Configure retention
+
+```bash
 [main]
 pg1-path=/var/lib/postgresql/13/main
 
@@ -17,12 +23,12 @@ repo1-retention-full=2
 
 [global:archive-push]
 compress-level=3
-----
+```
 
 
-=== Configure S3:
-[source, shell]
-----
+## Configure S3:
+
+```bash
 [main]
 pg1-path=/var/lib/postgresql/13/main
 
@@ -43,4 +49,4 @@ start-fast=y
     
 [global:archive-push]
 compress-level=3
-----
+```

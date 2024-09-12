@@ -18,8 +18,9 @@
 * S3 and Azure Compatible Object Store Support
 * Encryption
 
-## Build, Instal and Configure
+## Build, Install and Configure
 
 * [Build](Backup/PgBackRest/build.md)
 * [Installation](Backup/PgBackRest/Installation.md)
 * [PostgreSQL Configuration](Backup/PgBackRest/Configure%20Postgres.md)
+* [PgBackRest Configuration](Backup/PgBackRest/Configure%20PgBackRest.md)
