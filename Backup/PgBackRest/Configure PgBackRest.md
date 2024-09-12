@@ -103,7 +103,7 @@ start-fast=y
 compress-level=3
 ```
 
-## Final configuration for S3.
+## Final configuration example for S3.
 
 ```bash
 [main]
