@@ -31,7 +31,7 @@
 ## Basic commands
 
 | Purpose                                       | Command                                                                                |
-|----------------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------|----------------------------------------------------------------------------------------|
 | Get all backup info                           | sudo -u postgres pgbackrest info                                                       |
 | Create Stanza                                 | sudo -u pgbackrest pgbackrest --stanza=demo stanza-create                              |
 | Check whether congiurations are properly set  | sudo -u pgbackrest pgbackrest --stanza=demo check                                      |
