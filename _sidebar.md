@@ -1,5 +1,8 @@
 * [Installation](https://m-thirumal.github.io/installation_guide/#/PostgreSQL/Install_PostgresQL_in_Ubuntu)
 
+* [SQL] [SQL/sql.md]
+  * [Cheetsheet](SQL/cheetsheet.md)
+
 * [Roles & Group](Roles%20&%20Group/ROLE.md)
 
 * [Constraints](/constraint/constraint.md)
