@@ -11,12 +11,16 @@
     * [pg_dump](Administration/Backup/backup%20using%20pg_dump.md)
     * [PgBackRest](Administration/Backup/PgBackRest/pgbackrest.md)
     * [Restore](Administration/Restore/Restore.md)
+  * [Recovery](Administration/Recovery/recovery.md)
   * [Extension](Administration/Extension/Extension.md)
     * [PostGis](Administration/Extension/postgis.md)
   * [Replication](Administration/Replication/Replication.md)
   * [FWD](Administration/Foreign%20Data%20Wrapper/fwd.md)
   * [Cluster](Administration/Cluster/Commands.md)
   * [Tunning](Administration/Tuning/Tuning_for_High_Write_Workload.md)
+  * [Partioning](Administration/partition/partition.md)
+  * [Physical Location](Administration/Physical_location/physical_location.md)
+  * [Write-Ahead Log](Administration/wal/wal.md)
 
 * [Constraints](/constraint/constraint.md)
 
