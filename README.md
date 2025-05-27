@@ -2,6 +2,9 @@
 
 * [Installation](https://m-thirumal.github.io/installation_guide/#/PostgreSQL/Install_PostgresQL_in_Ubuntu)
 
+* [Theories & Concepts](concepts/concepts.md)
+  * [CAP Theroy](concepts/CAP/cap.md)
+  
 * [Administration](Administration/administration.md)
   * [Roles & Group](Administration/Roles%20&%20Group/ROLE.md)
   * [Backup & Restore](Administration/Backup/backup.md)

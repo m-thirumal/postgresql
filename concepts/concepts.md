@@ -1,10 +1,10 @@
 # Concepts & Theory
-  * [CAP Theorem](Concepts/CAP/cap_theorem.md)
+  * [CAP Theorem](Concepts/CAP/cap.md)
   * [ACID Properties](Concepts/ACID/acid.md)
   * [Database Constraints](Concepts/Constraints/constraints.md)
   * [Normalization](Concepts/Normalization/normalization.md)
-    * [1NF to 3NF](Concepts/Normalization/1nf_to_3nf.md)
-    * [BCNF to 5NF](Concepts/Normalization/bcnf_to_5nf.md)
+    * [1NF to 3NF](Concepts/Normalization/normalization.md#1nf_to_3nf)
+    * [BCNF to 5NF](Concepts/Normalization/normalization.md#bcnf_to_5nf)
   * [Transactions & Isolation Levels](Concepts/Transactions/isolation_levels.md)
   * [Indexing & Performance](Concepts/Indexing/indexing.md)
   * [BASE & Eventual Consistency](Concepts/BASE/base.md)

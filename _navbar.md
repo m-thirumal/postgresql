@@ -2,6 +2,9 @@
 
 * [SQL](SQL/sql.md)
   * [Cheetsheet](SQL/cheetsheet.md)
+  
+* [Theories & Concepts](concepts/concepts.md)
+  * [CAP Theroy](concepts/CAP/cap.md)
 
 * [Administration](Administration/administration.md)
   * [Roles & Group](Administration/Roles%20&%20Group/ROLE.md)
