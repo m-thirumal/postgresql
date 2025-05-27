@@ -3,33 +3,25 @@
 * [SQL](SQL/sql.md)
   * [Cheetsheet](SQL/cheetsheet.md)
 
-* [Roles & Group](Roles%20&%20Group/ROLE.md)
+* [Administration](Administration/administration.md)
+  * [Roles & Group](Administration/Roles%20&%20Group/ROLE.md)
+  * [Backup & Restore](Administration/Backup/backup.md)
+    * [pg_dump](Administration/Backup/backup%20using%20pg_dump.md)
+    * [PgBackRest](Administration/Backup/PgBackRest/pgbackrest.md)
+    * [Restore](Administration/Restore/Restore.md)
+  * [Extension](Administration/Extension/Extension.md)
+    * [PostGis](Administration/Extension/postgis.md)
+  * [Replication](Administration/Replication/Replication.md)
+  * [FWD](Administration/Foreign%20Data%20Wrapper/fwd.md)
+  * [Cluster](Administration/Cluster/Commands.md)
+  * [Tunning](Administration/Tuning/Tuning_for_High_Write_Workload.md)
 
 * [Constraints](/constraint/constraint.md)
 
   * [Foreign Constraint](/constraint/foreign%20key/Foreign%20key.md)
     * [Foreign key circular dependencies](/constraint/foreign%20key/Circular%20dependencies.md)
 
-* [Extension](Extension/Extension.md)
-
-   * [PostGis](Extension/postgis.md)
-
-* [Replication](Replication/Replication.md)
-
-* [FWD](Foreign%20Data%20Wrapper/fwd.md)
-
-* [Cluster](Cluster/Commands.md)
-
-* [Backup](Backup/backup.md)
-
-  * [pg_dump](Backup/backup%20using%20pg_dump.md)
-  * [PgBackRest](Backup/PgBackRest/pgbackrest.md)
-
-* [Restore](Restore/Restore.md)
-
 * [Modeler](https://m-thirumal.github.io/installation_guide/#/pgmodeler/build_pgmodeler_from_source_mac)
-
-* [Tunning](Tuning/Tuning_for_High_Write_Workload.md)
 
 * [Q & A](Q%20&%20A/q&a.md)
 
